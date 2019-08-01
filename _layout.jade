@@ -1,0 +1,159 @@
+doctype
+html
+	head
+
+		meta(charset='utf-8')
+
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+		meta(content='initial-scale=1, shrink-to-fit=no, width=device-width', name='viewport')
+
+		title A Nobel Prize for Daemonite
+
+		link(href='https://fonts.googleapis.com/css?family=News+Cycle', rel='stylesheet')
+
+		link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+
+		link(href='daemonite-material-clone/css/material.min.css', rel='stylesheet')
+
+		link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css', rel='stylesheet')
+
+		style.
+			@import "node_modules/daemonite-material/assets/scss/material";
+
+			$primary: #607d8b;
+			$secondary: #ffffe0;
+			$danger:  #990000;
+
+			//- @import 'daemonite-material-clone/assets/scss/material.scss';
+			@import "node_modules/daemonite-material/assets/scss/material";
+
+			:root {
+				--font-family-sans-serif: "News Cycle", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+			}
+
+			html, body {
+				font-family: 'News Cycle', sans-serif !important;
+				height: 100%;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-family: 'News Cycle', sans-serif !important;
+				font-weight: 300 !important;
+			}
+
+			.btn-outline-elegant {
+				border: 0.5px solid black;
+			}
+
+			.material-icons, .fa, .fab, .far, .fas {
+				vertical-align: middle;
+			}
+
+			.dignity {
+				font-family: 'News Cycle', sans-serif !important;
+			}
+			.material-icons, .fa {
+				vertical-align: middle;
+			}
+
+			.container {
+				height: 100vh;
+				margin-top: calc(100vh + 250px)
+			}
+
+			.battleship {
+				background-color: #607d8b;
+				color: white;
+			}
+
+	body
+		nav.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light
+			a.navbar-brand(href='/') 
+				i.fas.fa-sun.fa-2x
+				| &nbsp; Engenho Novo LLC
+
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+
+			#navbarSupportedContent.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto
+					li.nav-item.active
+						a.nav-link(href="#") In Media Res
+							span.sr-only (current)
+					li.nav-item
+						a.nav-link(href='#') Fim da Picada
+					li.nav-item
+						a.nav-link(href='#myNavdrawer', data-toggle='navdrawer') Out to Launch
+
+
+					li.nav-item.dropdown
+						a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Lista Suspensa
+			
+						.dropdown-menu(aria-labelledby='navbarDropdown')
+							a.dropdown-item(href='speed-demon') Speed Daemon
+				
+							a.dropdown-item(href='#') Dynamite
+				
+							.dropdown-divider
+				
+							a.dropdown-item(href='#') Daemonite
+							a.dropdown-item(href='#') Erudite
+							a.dropdown-item(href='#') Expedite
+							a.dropdown-item(href='#') Kilobyte
+							a.dropdown-item(href='#') Underwrite
+
+		//- A Navigation Drawer Per Hawer
+		
+		#myNavdrawer.navdrawer(aria-hidden='true', tabindex='-1')
+			.navdrawer-content
+				.navdrawer-header
+					a.navbar-brand.px-0(href='#') 
+						i.fas.fa-cogs.fa-lg
+						| &nbsp; Dark Satanic Mills
+				p.navdrawer-subheader Conjunctions
+
+				nav.navdrawer-nav
+					a.nav-item.nav-link(href='/hyper')
+						i.material-icons accessibility
+						| &nbsp; Hyperactivity
+					a.nav-item.nav-link(href='/dysphoria') 
+						i.fa.fa-signal.fa-lg
+						| &nbsp; Dysphoria
+					a.nav-item.nav-link(href='/anomie') 
+						i.fa.fa-gavel.fa-lg
+						| &nbsp; Anomie
+
+				.navdrawer-divider
+
+				p.navdrawer-subheader Funkspieler
+
+				ul.navdrawer-nav
+					li.nav-item
+						a.nav-link(href='/iconography')
+							i.material-icons.mr-3 all_inclusive
+							|  Iconography
+
+					li.nav-item
+						a.nav-link(href='/iconology')
+							i.material-icons.mr-3 local_cafe
+							|  Iconology
+
+					li.nav-item
+						a.nav-link(href='/oikonomia')
+							i.material-icons.mr-3 link
+							|  Oikonomia
+
+
+		script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+
+		script(src='bower_components/daemonite-material/js/material.min.js')
+
+	head
+		link(rel="stylesheet" href="/main.css")
+	body
+		!= yield

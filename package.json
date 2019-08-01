@@ -1,0 +1,8 @@
+{
+     "name": "Daemonite-Sketches-Harp",
+     "version": "1.0.0",
+     "description": "My Primeiro Harp Haiku on Heroku",
+     "dependencies": {
+       "harp": "*"
+     }
+   }
